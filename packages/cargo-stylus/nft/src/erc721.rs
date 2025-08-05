@@ -208,7 +208,7 @@ impl<T: Erc721Params> Erc721<T> {
     }
 
     /// Mints a new token and transfers it to `to`
-    pub fn mint(&mut self, to: Address) -> Result<(), Erc721Error> {
+    pub fn mint_abxglia(&mut self, to: Address) -> Result<(), Erc721Error> {
         let new_token_id = self.total_supply.get();
         self.total_supply.set(new_token_id + U256::from(1u8));
         self.transfer(new_token_id, Address::default(), to)?;
